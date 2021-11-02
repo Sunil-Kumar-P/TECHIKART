@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="p-3 m-3">
+        <h3 class="alert text-primary rounded-pill" style="text-align:center" >Login</h3>
+        <div class="col-lg-5 rounded mx-auto">
+            <div class="text-center col">
+            
+                <img
+                src="{% static 'image\logo.jpeg' %}" alt=""
+                class="" style="height: 150px;">
+            </div>
+            <form action="/login" method="POST">
+                
+                {% csrf_token %}
+
+                {% if error%}
+                <div class="alert alert-danger" role="alert">
+                    {{error}}
+                </div>
+                {% endif %}
+                <!-- email -->
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input required type="email" name="email" id=""
+                    value="{{values.email}}" 
+                    class=" form-control-sm form-control">
+                </div>
+
+
+                <!-- password -->
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" 
+                    name="password" 
+                    id=""
+                     class="form-control form-control-sm" >
+                </div>
+                <br>
+
+                <button type="submit" class="btn btn-sm btn-success col-lg-12" >Login</button>
+            </form>
+            <p>Dont Have an account ? <a href="{% url 'signup' %}"> Sign up.. </a></p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

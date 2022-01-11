@@ -1,5 +1,6 @@
 # Shopping
-#E-commerce
+//E-commerce
+
 Check if the python has been installed in the system.
 If not done download it from www.python.org
 

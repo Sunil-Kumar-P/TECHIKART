@@ -19,7 +19,7 @@ Change the directory
 >cd shops
 
 Install the required libraries
-pip install django pillow
+>pip install django pillow
 
 Then start the server
 >python manage.py runserver

@@ -24,5 +24,5 @@ Install the required libraries
 Then start the server
 >python manage.py runserver
 
-you can find this website here
+you can find this website
 http://sunilkumarp.pythonanywhere.com/
